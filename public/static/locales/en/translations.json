@@ -96,7 +96,8 @@
     "Nationality": "Nationality",
     "Rating": "Rating",
     "MainSpeaker": "Main Speaker",
-    "PhoneNumber": "Phone number"
+    "PhoneNumber": "Phone number",
+    "Email": "Email"
   },
   "General": {
     "Buttons": {

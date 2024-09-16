@@ -25,6 +25,7 @@ const Fragments = {
       nationality
       rating
       phoneNumber
+      email
       isMainSpeaker
     }
   `,

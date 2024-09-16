@@ -57,6 +57,7 @@ export const reducer = (state, action) => {
     case 'nationality':
     case 'rating':
     case 'phoneNumber':
+    case 'email':
       return modifyPath(['speakers', action.index, action.type], () => action.payload, state)
     case 'isMainSpeaker':
       return modifyPath(['speakers', action.index, action.type], () => action.payload, state)

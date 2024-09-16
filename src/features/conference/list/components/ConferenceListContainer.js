@@ -12,6 +12,7 @@ import { CONFERENCE_LIST_QUERY } from 'features/conference/gql/queries'
 import { useEmail } from 'hooks/useEmail'
 import { useError } from 'hooks/errorHandling'
 import { CHANGE_ATTENDANCE_STATUS_MUTATION, DELETE_CONFERENCE } from 'features/conference/gql/mutations'
+import { Box } from '@mui/material'
 
 const ConferenceListContainer = () => {
   const navigate = useNavigate()
@@ -45,7 +46,11 @@ const ConferenceListContainer = () => {
     setHeader(
       <ConferenceHeader
         title={t('NavBar.Conferences')}
-        actions={<IconButton type='add' key='addButton' title={t('General.Buttons.AddConference')} onClick={handleAddClick} />}
+        actions={
+          <Box mt={1}>
+            <IconButton type='add' key='addButton' title={t('General.Buttons.AddConference')} onClick={handleAddClick} />
+          </Box>
+        }
       />
     )
   }, [handleAddClick, setHeader, t])
