@@ -12,6 +12,7 @@ import { CONFERENCE_QUERY } from 'features/conference/gql/queries'
 import { useError } from 'hooks/errorHandling'
 import { UPDATE_CONFERENCE } from 'features/conference/gql/mutations'
 import { useEmail } from 'hooks/useEmail'
+import { Box } from '@mui/material'
 
 const ConferenceContainer = () => {
   const { t } = useTranslation()
@@ -66,7 +67,13 @@ const ConferenceContainer = () => {
     setHeader(
       <ConferenceHeader
         title={conference?.name}
-        actions={<IconButton type='save' title={t('General.Buttons.Save')} onClick={handleSave} />}
+        actions={
+          <Box mt={1}>
+            {' '}
+            {/* Add margin-top of 2 */}
+            <IconButton type='save' title={t('General.Buttons.Save')} onClick={handleSave} />
+          </Box>
+        }
       />
     )
   }, [conference?.name, handleSave, setHeader, t])
