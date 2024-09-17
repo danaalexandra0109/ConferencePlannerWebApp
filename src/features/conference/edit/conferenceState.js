@@ -47,6 +47,7 @@ export const reducer = (state, action) => {
           nationality: emptyString,
           rating: emptyString,
           phoneNumber: emptyString,
+          email: emptyString,
           isMainSpeaker: false
         }),
         state

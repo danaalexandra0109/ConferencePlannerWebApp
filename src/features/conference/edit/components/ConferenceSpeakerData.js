@@ -10,7 +10,10 @@ const ConferenceSpeakerData = props => {
   const { name, nationality, rating, isMainSpeaker, phoneNumber, email } = speaker
   const { t } = useTranslation()
 
-  const handleDispatch = actionType => value => dispatch({ type: actionType, payload: value, index })
+  const handleDispatch = actionType => value => {
+    console.log(value)
+    dispatch({ type: actionType, payload: value, index })
+  }
   const handleCheckboxDispatch = useCallback(
     (_event, checked) => dispatch({ type: 'isMainSpeaker', payload: checked, index }),
     [dispatch, index]
