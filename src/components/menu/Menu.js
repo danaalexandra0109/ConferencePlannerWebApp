@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { useLocation } from 'react-router-dom'
 import MenuItem from './MenuItem'
@@ -15,11 +15,7 @@ function Menu({ drawerOpen, withGradient }) {
       <List>
         {menuItems.map((menu, key) => {
           const menuItemProps = { menu, drawerOpen, activeRoute, withGradient }
-          return menu.children ? (
-            <CollapsibleMenuItem key={key} {...menuItemProps} />
-          ) : (
-            <MenuItem key={key} {...menuItemProps} />
-          )
+          return menu.children ? <CollapsibleMenuItem key={key} {...menuItemProps} /> : <MenuItem key={key} {...menuItemProps} />
         })}
       </List>
     </nav>
