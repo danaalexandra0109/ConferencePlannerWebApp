@@ -6,6 +6,7 @@ import { Forbidden, NotFound } from '@totalsoft/rocket-ui'
 import Welcome from 'features/welcome/Welcome'
 import ConferenceListContainer from 'features/conference/list/components/ConferenceListContainer'
 import ConferenceContainer from 'features/conference/edit/components/ConferenceContainer'
+import ConferenceInfoContainer from 'features/conference/info/components/ConferenceInfoContainer'
 
 const routes = [
   { path: '/', element: <Navigate replace to='/welcome' /> },
@@ -13,7 +14,8 @@ const routes = [
   { path: '/conferences/:id', element: <ConferenceContainer /> },
   { path: '/welcome', element: <CustomRoute isPrivate={false} component={Welcome} /> },
   { path: '/forbidden', element: <Forbidden /> },
-  { path: '*', element: <NotFound title='PageNotFound' /> }
+  { path: '*', element: <NotFound title='PageNotFound' /> },
+  { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> }
 ]
 
 export const notLoggedInRoutes = [

@@ -57,6 +57,18 @@ function Welcome() {
           />
         </Grid>
       </Grid>
+      {/* Add the welcome text here with appropriate spacing */}
+      <Grid item xs={12} style={{ marginTop: '40px' }}>
+        {' '}
+        {/* 5 spaces = 40px roughly */}
+        <Typography
+          variant='body2'
+          align='center'
+          color='default' // Lavender color in hex
+        >
+          {t('LandingPage.WelcomeMessage')}
+        </Typography>
+      </Grid>
     </Grid>
   )
 }

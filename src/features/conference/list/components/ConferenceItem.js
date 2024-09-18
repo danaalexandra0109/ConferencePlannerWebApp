@@ -15,10 +15,14 @@ const ConferenceItem = props => {
   const { name, organizerEmail, speakers, location, id } = conference
   const speaker = speakers.find(speaker => speaker.isMainSpeaker)
 
+  const handleViewClick = useCallback(() => {
+    navigate(`/conferences/view/${id}`)
+  }, [navigate, id])
+
   const handleEdit = useCallback(() => navigate(`/conferences/${id}`), [navigate, id])
   const title =
     email.toUpperCase() === organizerEmail?.toUpperCase() ? (
-      <ConferenceTitle title={name} onEdit={handleEdit} onDelete={onDelete(id)} />
+      <ConferenceTitle title={name} onEdit={handleEdit} onDelete={onDelete(id)} onView={handleViewClick} />
     ) : (
       name
     )

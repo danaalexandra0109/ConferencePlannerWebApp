@@ -49,7 +49,8 @@
   "LandingPage": {
     "Title": "Bun venit!",
     "Subtitle": "Te rog introdu email-ul personal:",
-    "BadEmail": "Acesta nu este un email valid!"
+    "BadEmail": "Acesta nu este un email valid!",
+    "WelcomeMessage": "Bine ati venit 👋 in aplicatia noastra pentru planificarea conferintelor 📅. Simtiti-va liberi sa explorati numeroasele noastre conferinte sau sa o adaugati pe a dumneavoastra 🤗. Enjoy!😸!"
   },
   "Conferences": {
     "Speaker": "Orator: ",
@@ -72,7 +73,8 @@
     "StartDate": "Data inceput",
     "EndDate": "Data sfarsit",
     "Type": "Tipul conferintei",
-    "Category": "Categorie"
+    "Category": "Categorie",
+    "View": "Vezi Detalii"
   },
   "Location": {
     "Name": "Nume",

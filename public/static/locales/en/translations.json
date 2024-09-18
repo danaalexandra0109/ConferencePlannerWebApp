@@ -57,7 +57,8 @@
   "LandingPage": {
     "Title": "Welcome!",
     "Subtitle": "Please enter your email:",
-    "BadEmail": "This is not a valid email!"
+    "BadEmail": "This is not a valid email!",
+    "WelcomeMessage": "Welcome 👋 to our conference planner app 📅. Feel free to explore our numerous conferences or add your own 🤗. Enjoy!😸!"
   },
   "Conferences": {
     "Speaker": "Speaker: ",
@@ -80,7 +81,8 @@
     "StartDate": "Start date",
     "EndDate": "End date",
     "Type": "Conference type",
-    "Category": "Category"
+    "Category": "Category",
+    "View": "View Details"
   },
   "Location": {
     "Name": "Name",
