@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 import CustomRoute from 'components/routing/CustomRoute'
-
+import About from 'features/about/About'
 import { Forbidden, NotFound } from '@totalsoft/rocket-ui'
 import Welcome from 'features/welcome/Welcome'
 import ConferenceListContainer from 'features/conference/list/components/ConferenceListContainer'
@@ -15,7 +15,8 @@ const routes = [
   { path: '/welcome', element: <CustomRoute isPrivate={false} component={Welcome} /> },
   { path: '/forbidden', element: <Forbidden /> },
   { path: '*', element: <NotFound title='PageNotFound' /> },
-  { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> }
+  { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> },
+  { path: 'about', element: <About /> }
 ]
 
 export const notLoggedInRoutes = [
