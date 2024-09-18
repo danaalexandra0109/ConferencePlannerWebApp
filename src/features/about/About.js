@@ -7,9 +7,11 @@ const About = () => {
 
   return (
     <Grid container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={10}>
-      {/* Title Section with Spacing */}
+      {/* Title Section with Spacing and Larger Text */}
       <Grid item xs={4} sx={{ marginTop: '40px' }}>
-        <Typography variant='h5'>{t('About.AboutMe')}</Typography>
+        <Typography variant='h4' sx={{ fontWeight: 'bold' }}>
+          {t('About.AboutMe')}
+        </Typography>
       </Grid>
 
       {/* Message Section */}
