@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import attendeeStatus from 'constants/attendeeStatus'
-import { Grid } from '@mui/material'
-import { Button, Typography } from '@totalsoft/rocket-ui'
+import { Box, Grid } from '@mui/material'
+import { Button, IconButton, Typography } from '@totalsoft/rocket-ui'
 
 const ConferenceContent = props => {
-  const { onChangeAttendanceStatus, conference } = props
+  const { onChangeAttendanceStatus, conference, onView } = props
   const { status, startDate, endDate, type, category } = conference
 
   const { t } = useTranslation()
@@ -32,6 +32,7 @@ const ConferenceContent = props => {
       <Grid item xs={12}>
         <Typography>{`${type?.name}, ${category?.name}`}</Typography>
       </Grid>
+      <Box mt={4}></Box>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           {showJoin && (
@@ -44,6 +45,7 @@ const ConferenceContent = props => {
               {t('Conferences.Withdraw')}
             </Button>
           )}
+          <IconButton type='view' onClick={onView} title={t('Conference.View')} size='tiny' color='info' />
           {showAttend && (
             <Button right color='info' size={'small'} onClick={onChangeAttendanceStatus(conference?.id, attendeeStatus.Attended)}>
               {t('Conferences.Attend')}
@@ -57,7 +59,8 @@ const ConferenceContent = props => {
 
 ConferenceContent.propTypes = {
   conference: PropTypes.object.isRequired,
-  onChangeAttendanceStatus: PropTypes.func.isRequired
+  onChangeAttendanceStatus: PropTypes.func.isRequired,
+  onView: PropTypes.func
 }
 
 export default ConferenceContent

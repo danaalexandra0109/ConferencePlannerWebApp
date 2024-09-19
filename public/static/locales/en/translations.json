@@ -18,6 +18,7 @@
     "Settings": "Settings",
     "Privacy": "Privacy",
     "Security": "Security",
+    "Notes": "Developer Notes",
     "About": "About App"
   },
   "Tooltips": {
@@ -77,6 +78,13 @@
   "About": {
     "AboutMe": "About me and the app",
     "Message": "This application was developed as a final project following TotalSoft's Software Bootcamp. This month has been full of surprises, challenges, and a wealth of information from which I tried to learn as much as possible. Together with the trainers, who were very patient with us, I managed to bring the application to this form. Although I had to miss three days due to a surprise holiday planned by my parents, I tried my best to bring the project to a final form. I really appreciate the opportunity to gain experience from this internship! 😸😸😸 I also want to thank my colleagues for the help they provided, and I hope that the help I tried to offer was useful."
+  },
+  "Notes": {
+    "InfoCard1": " On Thursday, the 19th of September 2024 the 'Developer Notes' page was added successfully. It contains the progress of the app from the start of the personal touch period! ",
+    "InfoCard2": " On Wednesday, the 18th of September the view conference information, accessible through the ey icon on each conference card, was added along with a new 'About App' page with the full story for the app! ",
+    "InfoCard3": " On Tuesday the 17th of September 2024, by the end of the day another field was added to the speakers, an email field and the feature do speaker email notification was fully functional with no errors! ",
+    "InfoCard4": " The second added email participant notification feature was finished and fully functional with no errors on Tuesday the 17th of September 2024. With the participant email notification a problem became noticeable when sending the emails, our participant didn't have to input a name so I added a method to extract their name from the emails provided! ",
+    "InfoCard5": " Base app finished on Monday the 16th of September 2024 by Pinzaru Dana Alexandra. By the end of the day speaker sms notification feature was finished and fully functional with no errors! "
   },
   "Conference": {
     "Info": "Conference info",

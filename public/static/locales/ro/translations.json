@@ -10,6 +10,7 @@
     "Settings": "Setari",
     "Privacy": "Confidentialitate",
     "Security": "Securitate",
+    "Notes": "Notitele Developerului",
     "About": "Despre Aplicatie"
   },
   "Tooltips": {
@@ -69,6 +70,13 @@
   "About": {
     "AboutMe": "Despre mine si aplicatie",
     "Message": "Aceasta aplicatie a fost dezvoltata ca proiect final in urma Bootcamp-ului Software al TotalSoft. Aceasta luna a fost plina de surprize, provocari si o multitudine de informatii din care am incercat sa invat cat mai multe. Alaturii de trainerii care au avut foarte multa rabdare cu noi am reusit sa aduc aplicatia in forma aceasta. Cu toate ca am fost nevoita sa lipsesc 3 zile avand un condiu surpriza planificat de parintii mei, am incercat tot ce am putut sa aduc proiectul la o forma finala. Apreciez foarte mult oportunitatea de a castiga experienta in urma acestui Internship!😸😸😸 Le multumesc si colegilor pentru ajutorul pe care mi l-au oferit si sper ca ajutorul pe care am incercat si eu sa il ofer a fost util."
+  },
+  "Notes": {
+    "InfoCard1": " Joi, 19 septembrie 2024, pagina „Notitele Dezvoltatorului” a fost adăugată cu succes. Contine progresul aplicatiei de la inceputul perioadei de lucru individual destinata adaugarii de feature-uri la alegerea dezvoltatorului! ",
+    "InfoCard2": " Miercuri, 18 septembrie, a fost adaugata pagina de informatii despre conferinta accesata prin ochisorul din cardul fiecarei conferinte in parte, impreună cu o noua pagina „Despre aplicație” cu povestea completa a aplicatiei!",
+    "InfoCard3": " Marti, 17 septembrie 2024, pana la sfarsitul zilei a fost adăugat un alt camp pentru oratori, un camp de e-mail si functia de notificare prin e-mail a oratorilor a fost complet functionala, fara erori! ",
+    "InfoCard4": " A doua functie adaugata, cea de notificare a participantilor prin e-mail, a fost finalizata si complet functionala, fara erori, marti, 17 septembrie 2024. Odata cu notificarea prin e-mail a participantului, s-a putut observa o problemă la trimiterea e-mailurilor, participantul nostru nu introducea un nume pentru logare, asa ca, am adaugat o metoda de a le extrage numele din e-mailurile furnizate! ",
+    "InfoCard5": " Aplicatia de baza a fost finalizata luni, 16 septembrie 2024 de Pinzaru Dana Alexandra. Pana la sfarsitul zilei, functia de notificare prin SMS a oratorilor a fost finalizata si complet functionala, fara erori!"
   },
   "Conference": {
     "Info": "Informatii conferinta",

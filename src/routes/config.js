@@ -7,6 +7,7 @@ import Welcome from 'features/welcome/Welcome'
 import ConferenceListContainer from 'features/conference/list/components/ConferenceListContainer'
 import ConferenceContainer from 'features/conference/edit/components/ConferenceContainer'
 import ConferenceInfoContainer from 'features/conference/info/components/ConferenceInfoContainer'
+import Notes from 'features/notes/Notes'
 
 const routes = [
   { path: '/', element: <Navigate replace to='/welcome' /> },
@@ -16,6 +17,7 @@ const routes = [
   { path: '/forbidden', element: <Forbidden /> },
   { path: '*', element: <NotFound title='PageNotFound' /> },
   { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> },
+  { path: 'notes', element: <Notes /> },
   { path: 'about', element: <About /> }
 ]
 
