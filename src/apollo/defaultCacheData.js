@@ -3,9 +3,11 @@
 // e.g. [yourCacheKey]: yourDefaultValue
 
 // import { emptyString } from 'utils/constants'
+import { emptyString } from 'utils/constants'
 import { emailKey } from './cacheKeyFunctions'
 
-const emailValue = { email: 'dana.pinzaru@totalsoft.ro' } // email should be emptyString in live
+const emailValue = { email: 'dana.pinzaru@totalsoft.ro' }
+// const emailValue = { email: emptyString }
 
 export const defaults = {
   [emailKey]: emailValue
