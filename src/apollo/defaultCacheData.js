@@ -3,7 +3,6 @@
 // e.g. [yourCacheKey]: yourDefaultValue
 
 // import { emptyString } from 'utils/constants'
-import { emptyString } from 'utils/constants'
 import { emailKey } from './cacheKeyFunctions'
 
 const emailValue = { email: 'dana.pinzaru@totalsoft.ro' }
