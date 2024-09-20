@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const ConferenceTitle = props => {
   const { t } = useTranslation()
-  const { title, onEdit, onDelete, onView } = props
+  const { title, onEdit, onDelete } = props
 
   return (
     <Grid container justifyContent='flex-start' alignItems='center'>
@@ -21,9 +21,6 @@ const ConferenceTitle = props => {
         <Grid item>
           <IconButton type='delete' onClick={onDelete} title={t('Conferences.Delete')} size='tiny' color='error' />
         </Grid>
-        <Grid item>
-          <IconButton type='view' onClick={onView} title={t('Conference.View')} size='tiny' color='info' />
-        </Grid>
       </Grid>
     </Grid>
   )
@@ -32,8 +29,7 @@ const ConferenceTitle = props => {
 ConferenceTitle.propTypes = {
   title: PropTypes.string,
   onEdit: PropTypes.func,
-  onDelete: PropTypes.func,
-  onView: PropTypes.func
+  onDelete: PropTypes.func
 }
 
 export default ConferenceTitle
