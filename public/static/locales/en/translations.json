@@ -19,7 +19,8 @@
     "Privacy": "Privacy",
     "Security": "Security",
     "Notes": "Developer Notes",
-    "About": "About App"
+    "About": "About App",
+    "Departments": "Departments"
   },
   "Tooltips": {
     "Logout": "Logout",

@@ -8,6 +8,7 @@ import ConferenceListContainer from 'features/conference/list/components/Confere
 import ConferenceContainer from 'features/conference/edit/components/ConferenceContainer'
 import ConferenceInfoContainer from 'features/conference/info/components/ConferenceInfoContainer'
 import Notes from 'features/notes/Notes'
+import DepartmentListContainer from 'features/departments/list/components/DepartmentsListContainer'
 
 const routes = [
   { path: '/', element: <Navigate replace to='/welcome' /> },
@@ -17,8 +18,9 @@ const routes = [
   { path: '/forbidden', element: <Forbidden /> },
   { path: '*', element: <NotFound title='PageNotFound' /> },
   { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> },
-  { path: 'notes', element: <Notes /> },
-  { path: 'about', element: <About /> }
+  { path: '/notes', element: <Notes /> },
+  { path: '/about', element: <About /> },
+  { path: '/departments', element: <DepartmentListContainer /> }
 ]
 
 export const notLoggedInRoutes = [
