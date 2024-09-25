@@ -1,13 +1,10 @@
-		
 {
-    "javascript.validate.enable": false,
-    "javascript.format.enable": true,
-    "typescript.format.enable": false,
-    "cSpell.words": [
-      "totalsoft"
-    ],
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      }
+  "javascript.validate.enable": false,
+  "javascript.format.enable": true,
+  "typescript.format.enable": false,
+  "cSpell.words": ["DEPARTAMENT", "departaments", "totalsoft"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+}

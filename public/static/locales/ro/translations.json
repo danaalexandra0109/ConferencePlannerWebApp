@@ -114,7 +114,8 @@
       "AddConference": "Adauga conferinta",
       "Save": "Salveaza",
       "AddSpeaker": "Adauga orator",
-      "DeleteSpeaker": "Sterge orator"
+      "DeleteSpeaker": "Sterge orator",
+      "AddDepartment": "Adauga departament"
     },
     "SavingSucceeded": "Salvarea a reusit!",
     "DeletingSucceeded": "Stergerea a reusit!"

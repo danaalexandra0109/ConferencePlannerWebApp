@@ -9,7 +9,7 @@ const DepartamentsList = props => {
   return (
     <Grid container spacing={2}>
       {departaments?.map(departament => (
-        <Grid item xs={12} lg={4} key={departament.id}>
+        <Grid item xs={12} lg={12} md={12} key={departament.id}>
           <DepartamentsItem departament={departament} />
         </Grid>
       ))}

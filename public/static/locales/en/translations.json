@@ -122,7 +122,8 @@
       "AddConference": "Add conference",
       "Save": "Save",
       "AddSpeaker": "Add speaker",
-      "DeleteSpeaker": "Delete speaker"
+      "DeleteSpeaker": "Delete speaker",
+      "AddDepartment": "Add department"
     },
     "SavingSucceeded": "Saving succeeded!",
     "DeletingSucceeded": "Deleting succeeded!"
