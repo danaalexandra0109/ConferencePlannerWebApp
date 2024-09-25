@@ -118,5 +118,13 @@
     },
     "SavingSucceeded": "Salvarea a reusit!",
     "DeletingSucceeded": "Stergerea a reusit!"
+  },
+  "Departaments": {
+    "Edit": "Modifica detalii",
+    "Delete": "Sterge departament",
+    "View": "Vizualizeaza detalii",
+    "Code": "Cod",
+    "Description": "Descriere",
+    "Employees": "Numar de angajati"
   }
 }

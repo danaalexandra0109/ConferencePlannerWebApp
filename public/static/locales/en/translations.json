@@ -126,5 +126,14 @@
     },
     "SavingSucceeded": "Saving succeeded!",
     "DeletingSucceeded": "Deleting succeeded!"
+  },
+
+  "Departaments": {
+    "Edit": "Edit details",
+    "Delete": "Delete department",
+    "View": "View Details",
+    "Code": "Code",
+    "Description": "Description",
+    "Employees": "Number of employees"
   }
 }

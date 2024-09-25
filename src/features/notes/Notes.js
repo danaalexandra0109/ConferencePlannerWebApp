@@ -10,8 +10,8 @@ const Notes = () => {
     <Box mt={2}>
       <Grid container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={2}>
         <Grid item container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={1} xs={10}>
-          <Grid item xs={10}>
-            <Card>
+          <Grid item xs={10} md={10} lg={10}>
+            <Card xs={10} md={10} lg={10}>
               <Typography variant='body1' align='center'>
                 {t('Notes.InfoCard1')}
               </Typography>
@@ -20,8 +20,8 @@ const Notes = () => {
         </Grid>
 
         <Grid item container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={1} xs={10}>
-          <Grid item xs={10}>
-            <Card>
+          <Grid item xs={10} md={10} lg={10}>
+            <Card xs={10} md={10} lg={10}>
               <Typography variant='body1' align='center'>
                 {t('Notes.InfoCard2')}
               </Typography>
@@ -30,8 +30,8 @@ const Notes = () => {
         </Grid>
 
         <Grid item container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={1} xs={10}>
-          <Grid item xs={10}>
-            <Card>
+          <Grid item xs={10} md={10} lg={10}>
+            <Card xs={10} md={10} lg={10}>
               <Typography variant='body1' align='center'>
                 {t('Notes.InfoCard3')}
               </Typography>
@@ -40,8 +40,8 @@ const Notes = () => {
         </Grid>
 
         <Grid item container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={1} xs={10}>
-          <Grid item xs={10}>
-            <Card>
+          <Grid item xs={10} md={10} lg={10}>
+            <Card xs={10} md={10} lg={10}>
               <Typography variant='body1' align='center'>
                 {t('Notes.InfoCard4')}
               </Typography>
@@ -50,8 +50,8 @@ const Notes = () => {
         </Grid>
 
         <Grid item container justifyContent='center' alignItems='center' alignContent='center' direction='column' spacing={1}>
-          <Grid item xs={10}>
-            <Card>
+          <Grid item xs={10} md={10} lg={10}>
+            <Card xs={10} md={10} lg={10}>
               <Typography variant='body1' align='center'>
                 {t('Notes.InfoCard5')}
               </Typography>

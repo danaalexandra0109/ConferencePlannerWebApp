@@ -69,6 +69,15 @@ const Fragments = {
       name
       code
     }
+  `,
+  departament: gql`
+    fragment departament on Departament {
+      id
+      name
+      code
+      description
+      employees
+    }
   `
 }
 export default Fragments

@@ -9,7 +9,7 @@ export const CONFERENCE_LIST_QUERY = gql`
         ...type
       }
       category {
-        ...category 
+        ...category
       }
       location {
         id
@@ -41,53 +41,62 @@ export const CONFERENCE_LIST_QUERY = gql`
   ${Fragments.status}
 `
 export const CONFERENCE_QUERY = gql`
-query conferenceData($id: Int!, $isNew: Boolean!) {
-  conference(id: $id) @skip(if: $isNew){
-    ...conference
-    type {
+  query conferenceData($id: Int!, $isNew: Boolean!) {
+    conference(id: $id) @skip(if: $isNew) {
+      ...conference
+      type {
+        ...type
+      }
+      category {
+        ...category
+      }
+      location {
+        ...location
+        city {
+          ...city
+        }
+        county {
+          ...county
+        }
+        country {
+          ...country
+        }
+      }
+      speakers {
+        ...speaker
+      }
+    }
+    typeList {
       ...type
     }
-    category {
+    categoryList {
       ...category
     }
-    location {
-      ...location
-      city {
-        ...city
-      }
-      county{
-        ...county
-      }
-      country{
-        ...country
-      }
+    cityList {
+      ...city
     }
-    speakers {
-      ...speaker
+    countyList {
+      ...county
+    }
+    countryList {
+      ...country
     }
   }
-  typeList {
-    ...type
+  ${Fragments.conference}
+  ${Fragments.speaker}
+  ${Fragments.location}
+  ${Fragments.type}
+  ${Fragments.category}
+  ${Fragments.city}
+  ${Fragments.county}
+  ${Fragments.country}
+`
+
+export const DEPARTAMENT_LIST_QUERY = gql`
+  query departmentsList {
+    departmentsList {
+      ...departament
+    }
   }
-  categoryList {
-    ...category
-  }
-  cityList {
-    ...city
-  }
-  countyList {
-    ...county
-  }
-  countryList {
-    ...country
-  }
-},
-${Fragments.conference}
-${Fragments.speaker}
-${Fragments.location}
-${Fragments.type}
-${Fragments.category}
-${Fragments.city}
-${Fragments.county}
-${Fragments.country}
+  ${Fragments.departament}
 `
