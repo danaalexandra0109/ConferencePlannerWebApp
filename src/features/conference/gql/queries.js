@@ -100,3 +100,12 @@ export const DEPARTAMENT_LIST_QUERY = gql`
   }
   ${Fragments.departament}
 `
+
+export const DEPARTAMENT_QUERY = gql`
+  query departamentData($id: Int!) {
+    departamentData(id: $id) {
+      ...departament
+    }
+  }
+  ${Fragments.departament}
+`

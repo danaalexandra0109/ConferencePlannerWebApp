@@ -6,7 +6,7 @@ import { Typography } from '@totalsoft/rocket-ui'
 
 const DepartmentsContent = props => {
   const { departament } = props
-  const { id, name, code, description, employees } = departament
+  const { description } = departament
   const { t } = useTranslation()
   return (
     <Grid container>
