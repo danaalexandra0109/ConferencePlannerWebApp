@@ -48,3 +48,9 @@ export const DELETE_CONFERENCE = gql`
     deleteConference(id: $id)
   }
 `
+
+export const DELETE_DEPARTAMENT = gql`
+  mutation deleteDepartment($id: Int!) {
+    deleteDepartment(id: $id)
+  }
+`

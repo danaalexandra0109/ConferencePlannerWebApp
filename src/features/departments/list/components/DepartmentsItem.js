@@ -7,10 +7,10 @@ import { Card } from '@totalsoft/rocket-ui'
 import { Grid } from '@mui/material'
 
 const DepartmentsItem = props => {
-  const { departament } = props
+  const { departament, onDelete } = props
 
-  const { name } = departament
-  const title = <DepartmentsTitle title={name} />
+  const { id, name } = departament
+  const title = <DepartmentsTitle title={name} id={id} onDelete={onDelete} />
 
   return (
     <Grid item xs={12} md={12} lg={12}>
@@ -22,7 +22,8 @@ const DepartmentsItem = props => {
 }
 
 DepartmentsItem.propTypes = {
-  departament: PropTypes.object.isRequired
+  departament: PropTypes.object.isRequired,
+  onDelete: PropTypes.func
 }
 
 export default DepartmentsItem

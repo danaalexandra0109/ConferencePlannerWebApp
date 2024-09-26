@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from 'react'
-import { useQuery } from '@apollo/client'
+import { useMutation, useQuery } from '@apollo/client'
 import { FakeText, IconButton } from '@totalsoft/rocket-ui'
 import { DEPARTAMENT_LIST_QUERY } from 'features/conference/gql/queries'
 import { useNavigate } from 'react-router-dom'
@@ -8,10 +8,13 @@ import { useHeader } from 'providers/AreasProvider'
 import DepartmentsHeader from '../DepartmentsHeader'
 import { Box } from '@mui/material'
 import { useTranslation } from 'react-i18next'
+import { DELETE_DEPARTAMENT } from 'features/conference/gql/mutations'
+import { useError } from 'hooks/errorHandling'
 
 const DepartmentListContainer = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const showError = useError()
 
   const { data, loading } = useQuery(DEPARTAMENT_LIST_QUERY)
   const handleAddClick = useCallback(() => {
@@ -33,13 +36,25 @@ const DepartmentListContainer = () => {
     )
   }, [handleAddClick, setHeader, t])
 
+  const [deleteDepartment] = useMutation(DELETE_DEPARTAMENT, {
+    refetchQueries: [{ query: DEPARTAMENT_LIST_QUERY }],
+    onError: showError
+  })
+
+  const handleDelete = useCallback(
+    id => () => {
+      deleteDepartment({ variables: { id } })
+    },
+    [deleteDepartment]
+  )
+
   if (loading) {
     return <FakeText lines={10} />
   }
 
   return (
     <>
-      <DepartmentsList departaments={data?.departmentsList} />
+      <DepartmentsList onDelete={handleDelete} departaments={data?.departmentsList} />
     </>
   )
 }
