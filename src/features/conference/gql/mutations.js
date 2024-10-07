@@ -42,25 +42,22 @@ export const CHANGE_ATTENDANCE_STATUS_MUTATION = gql`
   mutation changeAttendanceStatus($input: AttendeeInput!) {
     changeAttendanceStatus(input: $input)
   }
-  ${Fragments.departament}
 `
 export const DELETE_CONFERENCE = gql`
   mutation deleteConference($id: Int!) {
     deleteConference(id: $id)
   }
-  ${Fragments.departament}
 `
 
 export const DELETE_DEPARTAMENT = gql`
   mutation deleteDepartment($id: Int!) {
     deleteDepartment(id: $id)
   }
-  ${Fragments.departament}
 `
 
 export const UPDATE_DEPARTAMENT = gql`
   mutation updateDepartment($id: Int!) {
     updateDepartment(id: $id)
   }
-  ${Fragments.departament}
+  # ${Fragments.departament}
 `
