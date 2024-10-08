@@ -2,7 +2,18 @@
   "javascript.validate.enable": false,
   "javascript.format.enable": true,
   "typescript.format.enable": false,
-  "cSpell.words": ["DEPARTAMENT", "departaments", "totalsoft"],
+  "cSpell.words": [
+    "chaine",
+    "DEPARTAMENT",
+    "departaments",
+    "descripton",
+    "dpop",
+    "Dpop",
+    "escstr",
+    "Promesse",
+    "totalsoft",
+    "yxxx"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

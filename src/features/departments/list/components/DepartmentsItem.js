@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 const { default: DepartmentsTitle } = require('./DepartmentsTitle')
 import DepartmentsContent from './DepartmentsContent'
 import DepartmentsSubtitle from './DepartmentsSubtitle'
 import PropTypes from 'prop-types'
 import { Card } from '@totalsoft/rocket-ui'
 import { Grid } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 const DepartmentsItem = props => {
   const { departament, onDelete } = props
-
+  const navigate = useNavigate()
   const { id, name } = departament
-  const title = <DepartmentsTitle title={name} id={id} onDelete={onDelete} />
+  const handleEdit = useCallback(() => navigate(`/departments/${id}`), [navigate, id])
+
+  const title = <DepartmentsTitle title={name} onEdit={handleEdit} id={id} onDelete={onDelete} />
+
+
 
   return (
     <Grid item xs={12} md={12} lg={12}>

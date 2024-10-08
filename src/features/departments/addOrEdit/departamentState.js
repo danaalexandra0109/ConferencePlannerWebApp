@@ -1,6 +1,4 @@
-import { accordionActionsClasses } from '@mui/material'
-import { append, modify, modifyPath, remove } from 'ramda'
-import { emptyString, emptyArray } from 'utils/constants'
+import { emptyString } from 'utils/constants'
 
 export const initialDepartament = {
   name: emptyString,
@@ -15,6 +13,10 @@ export const reducer = (state, action) => {
     case 'code':
     case 'numberOfEmployees':
     case 'description':
-      return { ...state, [action.type]: action.payload }
+      return { ...state, [action.type]: action.payload };
+
+    case 'resetData':
+      return { ...initialDepartament, ...action.payload }; 
+
   }
 }

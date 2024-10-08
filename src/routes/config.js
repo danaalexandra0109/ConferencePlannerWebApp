@@ -9,6 +9,7 @@ import ConferenceContainer from 'features/conference/edit/components/ConferenceC
 import ConferenceInfoContainer from 'features/conference/info/components/ConferenceInfoContainer'
 import Notes from 'features/notes/Notes'
 import DepartmentListContainer from 'features/departments/list/components/DepartmentsListContainer'
+import DepartamentContainer from 'features/departments/addOrEdit/components/DepartamentContainer'
 
 const routes = [
   { path: '/', element: <Navigate replace to='/welcome' /> },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> },
   { path: '/notes', element: <Notes /> },
   { path: '/about', element: <About /> },
+  {path: '/departments/:id', element: <DepartamentContainer/> },
   { path: '/departments', element: <DepartmentListContainer /> }
 ]
 

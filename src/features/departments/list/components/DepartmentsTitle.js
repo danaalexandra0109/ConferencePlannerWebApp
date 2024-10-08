@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const DepartmentsTitle = props => {
   const { t } = useTranslation()
-  const { id, title, onDelete } = props
+  const { id, title, onDelete, onEdit } = props
 
   return (
     <Grid container justifyContent='flex-start' alignItems='center'>
@@ -16,7 +16,7 @@ const DepartmentsTitle = props => {
       </Grid>
       <Grid item xs={3} sm={3} lg={3} container justifyContent='flex-end' spacing={1}>
         <Grid item>
-          <IconButton type='edit' title={t('Departments.Edit')} size='tiny' color='warning' />
+          <IconButton type='edit'  onClick={onEdit} title={t('Departments.Edit')} size='tiny' color='warning' />
         </Grid>
         <Grid item>
           <IconButton type='delete' onClick={onDelete(id)} title={t('Departments.Delete')} size='tiny' color='error' />
