@@ -21,8 +21,9 @@ const routes = [
   { path: '/conferences/view/:id', element: <ConferenceInfoContainer /> },
   { path: '/notes', element: <Notes /> },
   { path: '/about', element: <About /> },
-  {path: '/departments/:id', element: <DepartamentContainer/> },
-  { path: '/departments', element: <DepartmentListContainer /> }
+  { path: '/departments/:id', element: <DepartamentContainer/> },
+  { path: '/departments', element: <DepartmentListContainer /> },
+  { path: '/departments/new', element: <DepartamentContainer/>}
 ]
 
 export const notLoggedInRoutes = [
