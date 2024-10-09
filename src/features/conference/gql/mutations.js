@@ -56,8 +56,13 @@ export const DELETE_DEPARTAMENT = gql`
 `
 
 export const UPDATE_DEPARTAMENT = gql`
-  mutation saveDepartment($id: Int!) {
-    saveDepartment(id: $id)
+  mutation updateDepartment($input: EditDep) {
+    updateDepartment(input: $input)
   }
-  # ${Fragments.departament}
+`
+
+export const ADD_DEPARTAMENT = gql`
+mutation addDepartment($input: AddDep){
+  addDepartment(input: $input)
+}
 `

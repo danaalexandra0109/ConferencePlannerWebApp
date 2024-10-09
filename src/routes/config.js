@@ -22,8 +22,7 @@ const routes = [
   { path: '/notes', element: <Notes /> },
   { path: '/about', element: <About /> },
   { path: '/departments/:id', element: <DepartamentContainer/> },
-  { path: '/departments', element: <DepartmentListContainer /> },
-  { path: '/departments/new', element: <DepartamentContainer/>}
+  { path: '/departments', element: <DepartmentListContainer /> }
 ]
 
 export const notLoggedInRoutes = [

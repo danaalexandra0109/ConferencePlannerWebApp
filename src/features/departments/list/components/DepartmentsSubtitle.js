@@ -10,8 +10,8 @@ const DepartmentsSubtitle = props => {
   const { t } = useTranslation()
 
   return (
-    <Grid container lg={12} direction='column'>
-      <Grid itme container lg={12}>
+    <Grid container direction='column'>
+      <Grid item container lg={12}>
         <Grid item lg={4}>
           <Typography>{t('Departaments.Code')}</Typography>
         </Grid>

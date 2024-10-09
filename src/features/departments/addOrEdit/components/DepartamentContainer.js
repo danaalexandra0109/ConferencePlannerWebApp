@@ -1,53 +1,63 @@
-import React, { useCallback, useEffect, useReducer } from "react"
-import { useTranslation } from "react-i18next"
-import { useNavigate, useParams } from "react-router-dom"
-import { initialDepartament, reducer } from "../departamentState"
-import { useError } from "hooks/errorHandling"
-import { FakeText, IconButton, useToast } from "@totalsoft/rocket-ui"
-import { useMutation, useQuery } from "@apollo/client"
-import { UPDATE_DEPARTAMENT } from "features/conference/gql/mutations"
-import { useHeader } from "providers/AreasProvider"
-import DepartmentsHeader from "features/departments/list/DepartmentsHeader"
-import { Box } from "@mui/material"
-import { DEPARTAMENT_QUERY } from "features/conference/gql/queries"
+import React, { useCallback, useEffect, useReducer } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useNavigate, useParams } from 'react-router-dom'
+import { initialDepartament, reducer } from '../departamentState'
+import { useError } from 'hooks/errorHandling'
+import { FakeText, IconButton, useToast } from '@totalsoft/rocket-ui'
+import { useMutation, useQuery } from '@apollo/client'
+import { ADD_DEPARTAMENT, UPDATE_DEPARTAMENT } from 'features/conference/gql/mutations'
+import { useHeader } from 'providers/AreasProvider'
+import DepartmentsHeader from 'features/departments/list/DepartmentsHeader'
+import { Box } from '@mui/material'
+import { DEPARTAMENT_QUERY } from 'features/conference/gql/queries'
 import Departament from './Departament'
-
-
 
 const DepartamentContainer = () => {
   const { t } = useTranslation()
-  const { id } = useParams()
-  const isNew = id === 'new'
+  const { id: idFromRoute } = useParams()
+  const isNew = idFromRoute === 'new'
   const [, setHeader] = useHeader()
   const [departament, dispatch] = useReducer(reducer, initialDepartament)
-  const navigate = useNavigate()
   const showError = useError()
   const addToast = useToast()
 
-  const [updateDepartament] = useMutation(UPDATE_DEPARTAMENT,{
-    onCompleted: result => {
+  const [updateDepartament] = useMutation(UPDATE_DEPARTAMENT, {
+    onCompleted: () => {
       addToast(t('General.SavingSucceeded'), 'succes')
-  
-      if(isNew){
-        navigate(`/departments/${result?.saveDepartament?.id}`)
-        return
-      }
-      result?.saveDepartament && dispatch({type:'departament', payload: result?.saveDepartament})
-    },
-    onError: showError
+    }
   })
 
-  const handleSave = useCallback(()=>{
-    const{id, name, code, employees, descripton} = departament
-    const input = {
-      id,
-      name,
-      code,
-      employees,
-      descripton
+  const [addDepartment] = useMutation(ADD_DEPARTAMENT, {
+    onCompleted: () => {
+      addToast(t('General.SavingSucceeded'), 'success')
+    },
+    onError: () => {
+      addToast('Teo se Grabeste', 'error')
     }
-    updateDepartament({variables:{input}})
-  },[departament, updateDepartament])
+  })
+
+  const handleSave = useCallback(() => {
+    const { id, name, code, employees, description } = departament
+    if (isNew) {
+      const addInput = {
+        name,
+        code,
+        employees,
+        description
+      }
+      addDepartment({ variables: { input: addInput } })
+    } else {
+      const input = {
+        id,
+        name,
+        code,
+        employees,
+        description
+      }
+      updateDepartament({ variables: { input } })
+    }
+  }, [departament, isNew, addDepartment, updateDepartament])
+
   useEffect(() => () => setHeader(null), [setHeader])
   useEffect(() => {
     setHeader(
@@ -63,28 +73,29 @@ const DepartamentContainer = () => {
     )
   }, [departament?.name, handleSave, setHeader, t])
 
-  useEffect(()=>{
-    if(isNew){
-      dispatch({type: 'resetData'})
+  useEffect(() => {
+    if (isNew) {
+      dispatch({ type: 'resetData' })
     }
-  },)
+  }, [isNew])
 
-  const {loading} = useQuery(DEPARTAMENT_QUERY, {
-    variables:{id: parseInt(id) || -1, isNew},
-    onCompleted:data => data?.departament && dispatch({type: 'resetData', payload: data?.departament}),
-    onError: showError
+  const { loading } = useQuery(DEPARTAMENT_QUERY, {
+    skip: isNew,
+    variables: { id: parseInt(idFromRoute) },
+    onCompleted: data => {
+      // debugger
+      return data?.departament && dispatch({ type: 'resetData', payload: data?.departament })
+    },
+    onError: error => {
+      showError(error)
+    }
   })
 
-  if(loading){
-    return <FakeText lines={10}/>
+  if (loading) {
+    return <FakeText lines={10} />
   }
-
-  return (
-    <Departament
-      departament={departament}
-      dispatch={dispatch}
-    />
-  )
+  console.log('dep', departament)
+  return <Departament departament={departament} dispatch={dispatch} />
 }
 
 export default DepartamentContainer
