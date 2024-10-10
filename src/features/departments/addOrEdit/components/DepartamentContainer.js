@@ -23,7 +23,7 @@ const DepartamentContainer = () => {
 
   const [updateDepartament] = useMutation(UPDATE_DEPARTAMENT, {
     onCompleted: () => {
-      addToast(t('General.SavingSucceeded'), 'succes')
+      addToast(t('General.SavingSucceeded'), 'success')
     }
   })
 
@@ -83,7 +83,8 @@ const DepartamentContainer = () => {
     skip: isNew,
     variables: { id: parseInt(idFromRoute) },
     onCompleted: data => {
-      return data?.departament && dispatch({ type: 'resetData', payload: data?.departament })
+      debugger
+      if (data.departamentData) dispatch({ type: 'resetData', payload: data.departamentData })
     },
     onError: error => {
       showError(error)

@@ -14,19 +14,19 @@ const DepartamentInfo = props => {
     <Grid container spacing={3}>
       <Grid item container lg={9} spacing={3}>
         <Grid item xs={12} sm={12} lg={12}>
-          <TextField label={t('Departament.Name')} fullWidth value={name} onChange={handleDispatch('name')} />
+          <TextField label={t('Departaments.Name')} fullWidth value={name} onChange={handleDispatch('name')} />
         </Grid>
       </Grid>
 
       <Grid item container spacing={3}>
         <Grid item xs={12} sm={12} lg={12}>
-          <TextField label={t('Departament.Code')} fullWidth value={code} onChange={handleDispatch('code')} />
+          <TextField label={t('Departaments.Code')} fullWidth value={code} onChange={handleDispatch('code')} />
         </Grid>
       </Grid>
 
       <Grid item container spacing={3}>
         <Grid item xs={12} sm={12} lg={12}>
-          <TextField label={t('Departament.Employees')} fullWidth value={employees} onChange={handleDispatch('employees')} isNumeric />
+          <TextField label={t('Departaments.Employees')} fullWidth value={employees} onChange={handleDispatch('employees')} isNumeric />
         </Grid>
       </Grid>
     </Grid>

@@ -133,8 +133,10 @@
     "Edit": "Edit details",
     "Delete": "Delete department",
     "View": "View Details",
+    "Name": "Departament Name",
     "Code": "Code",
     "Description": "Description",
-    "Employees": "Number of employees"
+    "Employees": "Number of employees",
+    "WrongCode": "Code already exists"
   }
 }

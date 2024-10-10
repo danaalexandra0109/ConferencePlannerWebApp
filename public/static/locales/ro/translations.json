@@ -124,8 +124,10 @@
     "Edit": "Modifica detalii",
     "Delete": "Sterge departament",
     "View": "Vizualizeaza detalii",
+    "Name": "Nume departament",
     "Code": "Cod",
     "Description": "Descriere",
-    "Employees": "Numar de angajati"
+    "Employees": "Numar de angajati",
+    "WrongCode": "Cod deja existent"
   }
 }

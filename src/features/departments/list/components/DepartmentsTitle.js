@@ -16,13 +16,13 @@ const DepartmentsTitle = props => {
       </Grid>
       <Grid item xs={3} sm={3} lg={3} container justifyContent='flex-end' spacing={1}>
         <Grid item>
-          <IconButton type='edit'  onClick={onEdit} title={t('Departments.Edit')} size='tiny' color='warning' />
+          <IconButton type='edit' onClick={onEdit} title={t('Departaments.Edit')} size='tiny' color='warning' />
         </Grid>
         <Grid item>
-          <IconButton type='delete' onClick={onDelete(id)} title={t('Departments.Delete')} size='tiny' color='error' />
+          <IconButton type='delete' onClick={onDelete(id)} title={t('Departaments.Delete')} size='tiny' color='error' />
         </Grid>
         <Grid item>
-          <IconButton type='view' title={t('Departments.View')} size='tiny' color='info' />
+          <IconButton type='view' title={t('Departaments.View')} size='tiny' color='info' />
         </Grid>
       </Grid>
     </Grid>
@@ -30,11 +30,10 @@ const DepartmentsTitle = props => {
 }
 
 DepartmentsTitle.propTypes = {
-  title: PropTypes.string,
-  id: PropTypes.number,
-  onEdit: PropTypes.func,
-  onDelete: PropTypes.func,
-  onView: PropTypes.func
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
 }
 
 export default DepartmentsTitle
