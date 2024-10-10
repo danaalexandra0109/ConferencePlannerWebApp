@@ -32,7 +32,7 @@ const DepartamentContainer = () => {
       addToast(t('General.SavingSucceeded'), 'success')
     },
     onError: () => {
-      addToast('Teo se Grabeste', 'error')
+      addToast(t('Departaments.WrongCode'), 'error')
     }
   })
 
@@ -83,7 +83,6 @@ const DepartamentContainer = () => {
     skip: isNew,
     variables: { id: parseInt(idFromRoute) },
     onCompleted: data => {
-      // debugger
       return data?.departament && dispatch({ type: 'resetData', payload: data?.departament })
     },
     onError: error => {
