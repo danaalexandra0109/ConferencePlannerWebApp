@@ -137,6 +137,7 @@
     "Code": "Code",
     "Description": "Description",
     "Employees": "Number of employees",
-    "WrongCode": "Code already exists"
+    "WrongCode": "Code already exists",
+    "Info": "Information"
   }
 }

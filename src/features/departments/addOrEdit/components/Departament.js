@@ -13,10 +13,10 @@ const Departament = props => {
 
   return (
     <>
-      <Card icon={Info} title={t('Departament.Info')}>
+      <Card icon={Info} title={t('Departaments.Info')}>
         <DepartamentInfo name={name} code={code} employees={employees} dispatch={dispatch} />
       </Card>
-      <Card icon={Description} title={t('Departament.Description')}>
+      <Card icon={Description} title={t('Departaments.Description')}>
         <DepartamentDescription description={description} dispatch={dispatch} />
       </Card>
     </>
