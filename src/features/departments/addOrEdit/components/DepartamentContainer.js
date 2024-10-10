@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useReducer } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { initialDepartament, reducer } from '../departamentState'
 import { useError } from 'hooks/errorHandling'
 import { FakeText, IconButton, useToast } from '@totalsoft/rocket-ui'

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from 'react'
 import { useMutation, useQuery } from '@apollo/client'
-import { FakeText, IconButton } from '@totalsoft/rocket-ui'
+import { FakeText, IconButton, useToast } from '@totalsoft/rocket-ui'
 import { DEPARTAMENT_LIST_QUERY } from 'features/conference/gql/queries'
 import { useNavigate } from 'react-router-dom'
 import DepartmentsList from './DepartmentsList'
@@ -15,6 +15,7 @@ const DepartmentListContainer = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const showError = useError()
+  const addToast = useToast()
 
   const { data, loading } = useQuery(DEPARTAMENT_LIST_QUERY)
   const handleAddClick = useCallback(() => {
@@ -38,6 +39,9 @@ const DepartmentListContainer = () => {
 
   const [deleteDepartment] = useMutation(DELETE_DEPARTAMENT, {
     refetchQueries: [{ query: DEPARTAMENT_LIST_QUERY }],
+    onCompleted: () => {
+      addToast(t('General.DeletingSucceeded'), 'success')
+    },
     onError: showError
   })
 
